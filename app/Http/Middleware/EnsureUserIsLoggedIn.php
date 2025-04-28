@@ -17,7 +17,7 @@ class EnsureUserIsLoggedIn
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Session::has('api_token')) {
+        if (!Session::has('user')) {
             return redirect()->route('login')->with('message', 'Please login to continue.');
         }
         return $next($request);

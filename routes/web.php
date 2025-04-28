@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [UserController::class, 'index'])->name('login');
-//Route::get('/login', [UserController::class, 'index'])->name('login');
+Route::get('/login', [UserController::class, 'index'])->name('login');
 Route::post('/authenticate', [UserController::class, 'authenticate'])->name('authenticate');
 Route::get('/register', [UserController::class, 'create'])->name('register');
 Route::post('/store', [UserController::class, 'store'])->name('store');

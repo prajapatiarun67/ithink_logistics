@@ -17,5 +17,5 @@
 
   <body class="text-center">
     @yield('content') 
-  </body>
+  </body> 
 </html>
